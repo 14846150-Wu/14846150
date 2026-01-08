@@ -76,24 +76,7 @@ plt.grid(True, alpha=0.3)
 plt.tight_layout()
 plt.show()
 
-# 上圖：原始淨流量 + 趨勢線
-axes[0].plot(t, net_vol, 'r-', linewidth=1.5, label='Original Net Flow', alpha=0.7)
-axes[0].plot(t, trend_curve, 'b--', linewidth=2, label='Trend Line (Polynomial Fit)')
-axes[0].set_title('Gas Net Flow with Drift', fontsize=14)
-axes[0].set_xlabel('time in seconds', fontsize=12)
-axes[0].set_ylabel('ml', fontsize=12)
-axes[0].legend(fontsize=10)
-axes[0].grid(True, alpha=0.3)
 
-# 下圖：去除趨勢後的淨流量
-axes[1].plot(t, detrended_net_vol, 'r-', linewidth=1.5)
-axes[1].axhline(y=0, color='k', linestyle='--', linewidth=1, alpha=0.5)
-axes[1].set_title('Gas Net Flow (Detrended)', fontsize=14)
-axes[1].set_xlabel('time in seconds', fontsize=12)
-axes[1].set_ylabel('ml', fontsize=12)
-axes[1].grid(True, alpha=0.3)
-
-plt.tight_layout()
 plt.show()
 
 # ========== 輸出統計信息 ==========
