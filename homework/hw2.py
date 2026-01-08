@@ -41,7 +41,7 @@ U, Sigma, V = mysvd(A)
 VT = V.T
 
 
-# ========= (你作業要寫的) Energy function =========
+# ========= Energy function =========
 def compute_energy(X: np.ndarray):
     return np.sum(X**2)
 
